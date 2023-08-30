@@ -1,5 +1,6 @@
 <div class="option-container">
-    <ng-container *ngFor="let option of fishData">
-		<app-fish-thumbnail [ngClass]="{'hidden': !option.FisheryManagement}" [item]=option></app-fish-thumbnail>
+	<div>Dashboard - Lorem Ipsum</div>
+    <ng-container *ngFor="let fish of fishList$ | async">
+		<app-fish-preview [ngClass]="{'hidden': !fish.FisheryManagement}" [item]=fish></app-fish-preview>
 	</ng-container>
 </div>

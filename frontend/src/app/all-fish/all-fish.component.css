@@ -3,7 +3,7 @@
     flex-wrap: wrap;
 }
 
-app-fish-thumbnail {
+app-fish-preview {
     flex: 45%;
     margin: 5px 10px;
     border: 1px solid #000;
@@ -15,7 +15,7 @@ app-fish-thumbnail {
 }
 
 @media all and (max-width: 600px) {
-    app-fish-thumbnail {
+    app-fish-preview {
         width: 100%;
     }
 }

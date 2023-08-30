@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FishThumbnailComponent } from './fish-thumbnail.component';
+import { FishPreviewComponent } from './fish-preview.component';
 
 describe('FishThumbnailComponent', () => {
-  let component: FishThumbnailComponent;
-  let fixture: ComponentFixture<FishThumbnailComponent>;
+  let component: FishPreviewComponent;
+  let fixture: ComponentFixture<FishPreviewComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [FishThumbnailComponent]
+      declarations: [FishPreviewComponent]
     });
-    fixture = TestBed.createComponent(FishThumbnailComponent);
+    fixture = TestBed.createComponent(FishPreviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

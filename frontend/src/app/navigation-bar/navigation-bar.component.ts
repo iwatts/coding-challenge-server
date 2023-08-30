@@ -12,7 +12,7 @@ export class NavigationBarComponent implements OnInit {
 	constructor(private dataService: DataService) { }
 
 	ngOnInit() {
-		this.dataService.getGoFish().subscribe((fishes: any[]) => {
+		this.dataService.getAllFish().subscribe((fishes: any[]) => {
 			fishes.forEach((fish: any) => {
 				if (fish.SpeciesName) {
 					this.speciesNameList.push(fish.SpeciesName)
