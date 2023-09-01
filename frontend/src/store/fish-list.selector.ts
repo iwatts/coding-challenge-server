@@ -6,8 +6,8 @@ export interface AppState {
 	selectedFishId: number | undefined;
 }
 
-export const selectAppState = (state: AppState) => state;
-export const selectFishList = createSelector(
-  selectAppState,
+export const primaryAppState = (state: AppState) => state;
+export const allFishList = createSelector(
+  primaryAppState,
   (state: AppState) => state.fishList
 );

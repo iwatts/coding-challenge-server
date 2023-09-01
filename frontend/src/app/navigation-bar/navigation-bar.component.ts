@@ -12,8 +12,8 @@ export class NavigationBarComponent implements OnInit {
 	constructor(private dataService: DataService) { }
 
 	ngOnInit() {
-		this.dataService.getAllFish().subscribe((fishes: any[]) => {
-			fishes.forEach((fish: any) => {
+		this.dataService.getAllFish().subscribe((fishes: any) => {
+			fishes.fishList.forEach((fish: any) => {
 				if (fish.SpeciesName) {
 					this.speciesNameList.push(fish.SpeciesName)
 				}

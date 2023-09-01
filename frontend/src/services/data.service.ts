@@ -1,6 +1,6 @@
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, catchError, throwError } from 'rxjs';
+import { Observable, catchError, map, tap, throwError } from 'rxjs';
 
 @Injectable({
 	providedIn: 'root'
@@ -21,8 +21,10 @@ export class DataService {
 	getAllFish(): Observable<any[]> {
 		const reqQuery = { apikey: this.API_LOCALKEY }
 		return this.http
-			.get<any[]>(`${this.API_LOCALHOST}/gofish`, {  headers: this.headers, params: reqQuery })
-			.pipe(catchError(this.handleError));;
+			.get<any[]>(`${this.API_LOCALHOST}/gofish`, { headers: this.headers, params: reqQuery })
+			.pipe(
+				map(res => ({ fishList: res })),
+				catchError(this.handleError));
 	}
 
 	private handleError(error: HttpErrorResponse): Observable<any> {
